@@ -6,7 +6,8 @@
 import router from './routes'
 import VueRouter from 'vue-router'
 
-
+import Form from "./utilities/Form";
+window.Form = Form;
 
 require('./bootstrap');
 
