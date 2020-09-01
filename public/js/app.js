@@ -38624,6 +38624,558 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container-fluid mt-5" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c(
+          "div",
+          { staticClass: "card card-danger card-outline card-filtros" },
+          [
+            _c("div", { staticClass: "card-header" }, [
+              _c("h3", { staticClass: "card-title" }, [
+                _c("i", { staticClass: "fa fa-1x fa-search" }),
+                _vm._v("\n          Filtrar Por:\n        ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-tools" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-tool",
+                    attrs: { type: "button", "data-card-widget": "collapse" }
+                  },
+                  [_c("i", { staticClass: "fas fa-minus" })]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "select",
+                    {
+                      staticClass: "form-control",
+                      attrs: { name: "", id: "" }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Estado: ")
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" }, [
+                  _c(
+                    "select",
+                    {
+                      staticClass: "form-control",
+                      attrs: { name: "", id: "" }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Campaña:")
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "card card-inscription" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("h3", { staticClass: "card-title" }, [
+              _vm._v("Listado de Inscripciones")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "div",
+              {
+                staticClass: "dataTables_wrapper dt-bootstrap4",
+                attrs: { id: "example1_wrapper" }
+              },
+              [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-6 col-sm-12 col-md-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_length",
+                        attrs: { id: "example1_length" }
+                      },
+                      [
+                        _c("label", [_vm._v("Show")]),
+                        _vm._v(" "),
+                        _c(
+                          "select",
+                          {
+                            staticClass:
+                              "custom-select custom-select-sm form-control form-control-sm",
+                            attrs: {
+                              id: "selectVal",
+                              name: "example1_length",
+                              "aria-controls": "example1"
+                            }
+                          },
+                          [
+                            _c("option", { attrs: { value: "10" } }, [
+                              _vm._v("10")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "25" } }, [
+                              _vm._v("25")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "50" } }, [
+                              _vm._v("50")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "100" } }, [
+                              _vm._v("100")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("label", [_vm._v("entries")])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6 col-sm-12 col-md-6" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_filter float-right",
+                        attrs: { id: "example1_filter" }
+                      },
+                      [
+                        _c("label", [
+                          _c("i", { staticClass: "fa fa-cog" }, [
+                            _vm._v("Columnas")
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c(
+                      "table",
+                      {
+                        staticClass:
+                          "table table-bordered table-striped dataTable mt-4",
+                        attrs: {
+                          id: "example1",
+                          role: "grid",
+                          "aria-describedby": "example1_info"
+                        }
+                      },
+                      [
+                        _c("thead", [
+                          _c("tr", { attrs: { role: "row" } }, [
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting_asc",
+                                staticStyle: { width: "278px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "example1",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-sort": "ascending",
+                                  "aria-label":
+                                    "Rendering engine: activate to sort column descending"
+                                }
+                              },
+                              [_vm._v("Rendering engine")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "358px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "example1",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "Browser: activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("Browser")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "335px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "example1",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "Platform(s): activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("Platform(s)")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "237px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "example1",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "Engine version: activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("Engine version")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              {
+                                staticClass: "sorting",
+                                staticStyle: { width: "173px" },
+                                attrs: {
+                                  tabindex: "0",
+                                  "aria-controls": "example1",
+                                  rowspan: "1",
+                                  colspan: "1",
+                                  "aria-label":
+                                    "CSS grade: activate to sort column ascending"
+                                }
+                              },
+                              [_vm._v("CSS grade")]
+                            )
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tbody", [
+                          _c(
+                            "tr",
+                            { staticClass: "odd", attrs: { role: "row" } },
+                            [
+                              _c("td", { staticClass: "sorting_1" }, [
+                                _vm._v("Gecko")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Firefox 1.0")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Win 98+ / OSX.2+")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("1.7")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("A")])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "tr",
+                            { staticClass: "even", attrs: { role: "row" } },
+                            [
+                              _c("td", { staticClass: "sorting_1" }, [
+                                _vm._v("Gecko")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Firefox 1.5")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("Win 98+ / OSX.2+")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("1.8")]),
+                              _vm._v(" "),
+                              _c("td", [_vm._v("A")])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("tfoot", [
+                          _c("tr", [
+                            _c(
+                              "th",
+                              { attrs: { rowspan: "1", colspan: "1" } },
+                              [_vm._v("Rendering engine")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              { attrs: { rowspan: "1", colspan: "1" } },
+                              [_vm._v("Browser")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              { attrs: { rowspan: "1", colspan: "1" } },
+                              [_vm._v("Platform(s)")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              { attrs: { rowspan: "1", colspan: "1" } },
+                              [_vm._v("Engine version")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "th",
+                              { attrs: { rowspan: "1", colspan: "1" } },
+                              [_vm._v("CSS grade")]
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-12 col-md-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dataTables_info",
+                        attrs: {
+                          id: "example1_info",
+                          role: "status",
+                          "aria-live": "polite"
+                        }
+                      },
+                      [_vm._v("Mostrando 1 a 10 de 57 datos")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-12 col-md-7" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "dataTables_paginate paging_simple_numbers",
+                        attrs: { id: "example1_paginate" }
+                      },
+                      [
+                        _c("ul", { staticClass: "pagination float-right" }, [
+                          _c(
+                            "li",
+                            {
+                              staticClass:
+                                "paginate_button page-item previous disabled",
+                              attrs: { id: "example1_previous" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "0",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("Previous")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item active" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "1",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("1")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "2",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("2")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "3",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("3")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "4",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("4")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "5",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("5")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            { staticClass: "paginate_button page-item" },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "6",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("6")]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "li",
+                            {
+                              staticClass: "paginate_button page-item next",
+                              attrs: { id: "example1_next" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "page-link",
+                                  attrs: {
+                                    href: "#",
+                                    "aria-controls": "example1",
+                                    "data-dt-idx": "7",
+                                    tabindex: "0"
+                                  }
+                                },
+                                [_vm._v("Next")]
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/users.vue?vue&type=template&id=17455099&":
 /*!***************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/users.vue?vue&type=template&id=17455099& ***!
@@ -54184,6 +54736,7 @@ module.exports = function(module) {
 var map = {
 	"./components/ExampleComponent.vue": "./resources/js/components/ExampleComponent.vue",
 	"./views/dashboard.vue": "./resources/js/views/dashboard.vue",
+	"./views/inscriptions.vue": "./resources/js/views/inscriptions.vue",
 	"./views/users.vue": "./resources/js/views/users.vue"
 };
 
@@ -54397,6 +54950,10 @@ var routes = [{
   path: '/users',
   name: 'users',
   component: __webpack_require__(/*! ./views/users */ "./resources/js/views/users.vue")["default"]
+}, {
+  path: '/inscriptions',
+  name: 'inscriptions',
+  component: __webpack_require__(/*! ./views/inscriptions */ "./resources/js/views/inscriptions.vue")["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   routes: routes
@@ -54733,6 +55290,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/inscriptions.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/views/inscriptions.vue ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./inscriptions.vue?vue&type=template&id=24f042cc& */ "./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/inscriptions.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc& ***!
+  \****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./inscriptions.vue?vue&type=template&id=24f042cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/inscriptions.vue?vue&type=template&id=24f042cc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_inscriptions_vue_vue_type_template_id_24f042cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/views/users.vue":
 /*!**************************************!*\
   !*** ./resources/js/views/users.vue ***!
@@ -54820,8 +55430,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\hp\Desktop\ProyectosCAEN-EPG\vmvideos\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\hp\Desktop\ProyectosCAEN-EPG\vmvideos\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\laravel-adminlte3-auth\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\laravel-adminlte3-auth\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

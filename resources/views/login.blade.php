@@ -25,7 +25,8 @@
                                 <span class="mb-0 font-up font-bold text-secondary text-uppercase">Ingreso personal autorizado</span>
                             </div>
                             <div class="card-body">
-                                <form method="POST" action="">
+                            <form method="GET" action="{{ route('home') }}">
+                                {{csrf_field()}}
                                     <div class="md-form mb-4">
                                         <label for="orangeForm-name3">Numero de Documento </label> 
                                         <div class="input-group">

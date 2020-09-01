@@ -1,0 +1,13 @@
+.navbar-red-caen, 
+.brand-link{
+    background-color: #a71737!important;
+}
+
+.card-inscription, .card-filtros{
+    width: 95%;
+}
+
+#selectVal{
+    width: auto!important;
+}
+
