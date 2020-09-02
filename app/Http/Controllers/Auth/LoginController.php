@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
+use App\User;
+use GuzzleHttp\Client;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class LoginController extends Controller
 {
@@ -26,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -36,5 +39,31 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    protected function authenticated(Request $request,$user)
+    {
+        try{
+            $input = $request->toArray();
+            $http = new Client();
+            $data = [
+                'form_params' => [
+                    'grant_type' => 'password',
+                    'client_id' => env('API_CLIENT_ID'),
+                    'client_secret' => env('API_CLIENT_SECRET'),
+                    'username' => $input[$this->username()],
+                    'password' =>$input['password'],
+                    'scope' => '',
+                ],
+            ];
+            $response = $http->post(env('APP_URL').'/oauth/token', $data);
+            $token_api = json_decode((string) $response->getBody(), true);
+            session()->put('api_token',$token_api);
+        }catch(Exception $e){
+            $this->logout($request);
+            dd($e->getMessage());
+        }
+
     }
 }

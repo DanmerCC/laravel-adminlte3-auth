@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('/prueba', 'moduloAcademico\DistritoController@index');
 
 Route::get('/home', function(){
     return view('home');
@@ -24,7 +25,7 @@ Route::get('/home', function(){
 
 
 
-Auth::routes();
-/* 
+// Auth::routes();
+/*
 Route::get('/home', 'HomeController@index')->name('home');
  */

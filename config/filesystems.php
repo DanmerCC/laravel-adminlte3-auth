@@ -37,7 +37,7 @@ return [
     | may even configure multiple disks of the same driver. Defaults have
     | been setup for each driver as an example of the required options.
     |
-    | Supported Drivers: "local", "ftp", "sftp", "s3"
+    | Supported Drivers: "local", "ftp", "sftp", "s3", "rackspace"
     |
     */
 
@@ -52,7 +52,7 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
+            'visibility' => 'public'
         ],
 
         's3' => [
@@ -62,24 +62,41 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
         ],
 
-    ],
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => env('FTP_HOST'),
+            'username' => env('FTP_USERNAME'),
+            'password' => env('FTP_PASSWORD'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Symbolic Links
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the symbolic links that will be created when the
-    | `storage:link` Artisan command is executed. The array keys should be
-    | the locations of the links and the values should be their targets.
-    |
-    */
+            // Optional FTP Settings...
+             'port' => env('FTP_PORT'),
+            // 'root' => '',
+            // 'passive' => true,
+            // 'ssl' => true,
+            // 'timeout' => 30,
+        ],
 
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
+        'ftpinscripciones' => [
+            'driver' => 'ftp',
+            'host' => env('INSCRIPCIONES_FTP_HOST'),
+            'username' => env('INSCRIPCIONES_FTP_USERNAME'),
+            'password' => env('INSCRIPCIONES_FTP_PASSWORD'),
+            'port' => env('INSCRIPCIONES_FTP_PORT',21),
+            'root' => env('INSCRIPCIONES_FTP_ROOT'),
+            'timeout' => 10,
+        ],
+        'documents' => [
+            'driver' => 'ftp',
+            'host' => env('INSCRIPCIONES_FTP_HOST'),
+            'username' => env('INSCRIPCIONES_FTP_USERNAME'),
+            'password' => env('INSCRIPCIONES_FTP_PASSWORD'),
+            'port' => env('INSCRIPCIONES_FTP_PORT',21),
+            'root' => 'documents',
+            'timeout' => 10,
+        ],
+
     ],
 
 ];
