@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,12 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/prueba', 'moduloAcademico\DistritoController@index');
 
-Route::get('/home', function(){
-    return view('home');
-})->name('home');
+Route::get('/home', 'HomeController@index');
 
+Route::post('login', 'Auth\LoginController@login')->name('login');
 
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Auth::routes();
 /*

@@ -18,18 +18,24 @@
                         <img src="{{asset('images/logo-caen.png')}}" alt="CAEN" class="login-header__img mb-2">
                         <h1 class="login-header__title title">Ingrese sus credenciales</h1>
                     </div>
-                    <form class="login-body mt-2" method="GET" action="{{ route('home') }}">
-                        {{csrf_field()}}
-                        <div class="input-login mb-4">
+                    <form class="login-body mt-2" method="POST" action="{{route('login')}}">
+                        @if(Session::has('error_message'))
+                        <div class="text-center mb-3">
+                            <span class="mb-5 " style="color:red">{{ Session::get('error_message') }}</span>
+                        </div>
+                        @endif
+                        @csrf
+                        <div class="input-login ">
                             <div class="input-login-icon">
                                 <i class="login-icon fa fa-user"></i>
                             </div>
-                            <input name="document_number" type="text" id="orangeForm-name3"
-                            class="input-control {{ $errors->has('document_number') ? ' is-invalid' : '' }}"
-                            autocomplete="off" maxlength="15" oninput="if(this.value.length > this.maxLength) this.value =
-                            this.value.slice(0, this.maxLength);" value="{{old('document_number')}}" placeholder="Número de documento">
+                            <input name="email" type="text" id="orangeForm-name3"
+                            class="input-control {{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{old('document_number')}}" placeholder="Email">
                         </div>
-                        <div class="input-login mb-4">
+                        @if ($errors->has('email'))
+                        <span style="color:red">{{$errors->first('email')}}</span>
+                        @endif
+                        <div class="input-login mt-4">
                             <div class="input-login-icon">
                                 <span id="eye" action="hide" class="login-icon fas fa-eye"></span>
                             </div>
@@ -37,12 +43,24 @@
                             class="input-control {{ $errors->has('password') ? ' is-invalid' : '' }}"
                             value="{{old('password')}}" placeholder="Contraseña">
                         </div>
-                        <div class="row ingresar">
+                        @if ($errors->has('email'))
+                            <span style="color:red">{{$errors->first('email')}}</span>
+                            @endif
+                        <div class="row ingresar mt-3">
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-login  btn-block">
                                     Ingresar
                                 </button>
                             </div>
+                            <div class="col-12 text-center mt-3 text-center">
+                                <p>- o -</p>
+                            </div>
+                            <div class="col-12 text-center ">
+                                <a href="#" class="btn p-2  btn-block btn-primary">
+                                    <i class="fab fa-google-plus mr-2"></i> Ingresar usando Google+
+                                  </a>
+                            </div>
+                            
                         </div>
                     </form>
                 </div>

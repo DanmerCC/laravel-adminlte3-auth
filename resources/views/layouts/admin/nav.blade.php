@@ -7,7 +7,6 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
-
         <!-- Control Sidebar -->
         <li class="nav-item">
             <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">

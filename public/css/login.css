@@ -83,7 +83,7 @@ body{
     font-size: var(--font-size-title);
     color: var(--color-title);
     font-weight: 600;
-    margin-bottom: 1.75em;
+    margin-bottom: 1.5em;
 }
 .input-login{
     position: relative;

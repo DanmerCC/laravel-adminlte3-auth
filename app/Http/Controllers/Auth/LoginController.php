@@ -7,6 +7,9 @@ use App\User;
 use GuzzleHttp\Client;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Auth;
+
+use Redirect;
 
 
 class LoginController extends Controller
@@ -22,14 +25,14 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    //use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/admin';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -40,6 +43,47 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    private function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|string',
+            'password' => 'required|string'
+        ]);
+    }
+
+
+    public function login(Request $request){
+
+        $this->validateLogin($request);
+        
+        /*Aut::attemp busca los valores de la tabla public users y los compara
+        con valores ingresados por el usuario*/
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+
+            return Redirect::intended('/home');
+        } else {
+            // Si los datos no son los correctos volvemos al login y mostramos un error
+            return Redirect::back()->with('error_message', 'Credenciales Incorrectas')->withInput();
+            //    return Redirect::intended('/login');
+            }
+
+        
+    }
+
+    
+
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        //return redirect()->route('showLogin');
+        return Redirect::to('/')->with('error_message', 'Salio correctamente');
+    }
+
 
 
     protected function authenticated(Request $request,$user)
