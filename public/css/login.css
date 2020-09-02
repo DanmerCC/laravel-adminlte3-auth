@@ -1,60 +1,213 @@
-body{
-    font-family: "Montserrat";
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
 }
-.div-contendido{
-    position: absolute;
-    height: 100%;
+:root{
+    --font-title: 'Open Sans', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+
+    --color-title: #555;
+    --color-subtitle: #555;
+    --color-text: #888;
+    --color-primary: #a71737;
+    --color-primary-dark: #911530;
+    --color-primary-light: #c4435f;
+    --color-primary-contrary: #FFF;
+    /* --color-primary: #16a5a0;
+    --color-primary-dark: #127e7a;
+    --color-primary-light: #2daaa6;
+    --color-primary-contrary: #FFF; */
+
+    --bg-primary-degradient: linear-gradient(hsla(347, 76%, 37%, 0.9),hsla(347, 76%, 37%, 0.9));
+    /* --bg-primary-degradient: linear-gradient(#165da5d0,#16a5a0d2); */
+
+    --input-radius: .25em;
+
+    /* 1rem = 16px */
+    --font-size-title: 1.75rem;
+    --font-size-subtitle: 1.75rem;
+    --font-size-text: 1rem;
+}
+
+body{
+    font-family: var(--font-text);
+    color: var(--color-text);
     width: 100%;
-    background-image : url(../images/fondo-login.jpg);
+    min-height: 100vh;
+    background-image :
+                        url(../images/fondo-login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(4px);
-   
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.img-logo{
-    width: 100px;
-    display: block;
-    
-
+.login-container{
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 0 4px -2px var(--color-text);
 }
-
-.ingresar .btn-success{
-    background-color: #a71737!important;
-    border:  #a71737!important;
-  }
-
-  .titulo{
-      background-color: #a71737!important;
-  }
-
-  .card {
-    border-radius: 0!important;
-  }
-
-  .titulo h1{
-      margin-top: 2rem;
-      font-weight: 500;
-      color: #fff;
-  }
-
-  .titulo h2{
-    margin-top: 2rem;
-    font-weight: 500;
-    color: #f3f3f3;
+.login-flex{
+    display: flex;
+}
+.title,
+.subtitle{
+    font-family: var(--font-title);
+    line-height: 1.3em;
 }
 
-.postgrado
-{
-    font-weight: 900;
-    text-transform: uppercase;
+/* ================ LOGIN IZQUIERDO ================ */
+
+.login-left{
+    background-color: var(--color-primary-contrary);
+    flex: 1;
+    font-size: var(--font-size-text);
 }
 
-.redes-sociales {
+/* ================ LOGIN IZQUIERDO (LOGIN CARD) ================ */
+
+.login-card{
+    margin: 0;
+    width: 100%;
+    padding: 2em 2.5em 3em !important;
+}
+.login-header{
+    text-align: center;
+}
+.login-header__img{
+    width: calc(7.5 * var(--font-size-text));
+}
+.login-header__title{
+    font-size: var(--font-size-title);
+    color: var(--color-title);
+    font-weight: 600;
+    margin-bottom: 1.75em;
+}
+.input-login{
+    position: relative;
+    font-size: var(--font-size-text);
+}
+.input-login-icon{
+    font-size: var(--font-text);
+    display: flex;
     position: absolute;
-    bottom: 1px;
-    right: 15px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2.5em;
+    font-family: var(--font-size-text);
 }
-.redes-sociales i{
-    color: #fff;
-    margin-right: 1rem;
+.input-control{
+    font-size: var(--font-size-text);
+    font-family: var(--font-size-text) !important;
+    padding: .5em .5em .5em 2.5em !important;
+    border-radius: var(--input-radius);
+    display: block;
+    width: 100%;
+    border: 1px solid var(--color-text);
+    outline: none;
+}
+.input-control:focus,
+.input-control:active,
+.input-control:focus{
+    border-color: var(--color-primary-light);
+}
+.btn-login{
+    font-size: var(--font-size-text);
+    border-radius: var(--input-radius);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-contrary);
+    box-shadow: -2px -2px 2px var(--color-primary-dark) inset;
+    transition: transform .1s ease-out;
+    padding: .5em;
+    margin-top: 1em;
+}
+.btn-login:hover,
+.btn-login:active{
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-dark);
+    color: var(--color-primary-contrary);
+}
+.btn-login:active{
+    transform: scale(1.008);
+}
+
+/* ================ LOGIN DERECHO ================ */
+
+.login-right{
+    background: var(--bg-primary-degradient);
+    color: var(--color-primary-contrary);
+    flex: 1;
+}
+
+.login-info{
+    position: relative;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.login-info__description{
+    padding: 2em 1em;
+    border: 1px solid;
+    border-radius: var(--input-radius);
+}
+.login-info__description h2{
+    font-weight: 400;
+    font-size: var(--font-size-subtitle);
+}
+.login-info__redes{
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+}
+.social-link{
+    display: inline-block;
+    transition: transform .1s ease-out;
+}
+.social-link,
+.social-link:hover{
+    color: var(--color-primary-contrary);
+}
+.social-link:hover{
+    transform: scale(1.5);
+}
+@media screen and (max-width: 992px){
+    :root{
+        --font-size-title: 1.55rem;
+        --font-size-subtitle: 1.55rem;
+        --font-size-text: .9rem;
+    }
+    .login-container{
+        max-width: 750px;
+    }
+}
+@media screen and (max-width: 768px){
+    :root{
+        --font-size-title: 1.1rem;
+        --font-size-subtitle: 1.1rem;
+        --font-size-text: .85rem;
+    }
+    .login-left{
+        border-radius: var(--input-radius);
+    }
+    .login-right{
+        display: none;
+    }
+    .login-container{
+        width: auto;
+    }
+}
+@media screen and (max-width: 576px){
+    :root{
+        --font-size-title: 1.1rem;
+        --font-size-subtitle: 1.1rem;
+        --font-size-text: .75rem;
+    }
 }
